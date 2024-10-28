@@ -6,7 +6,7 @@ title: "Data Preparation and Processing"
 
 ### Overview of Data Flow 📊
 
-``` mermaid
+```{mermaid}
 graph TD
     A[Raw Data 📥] --> B[Extraction 🔍]
     B --> C[Cleaning 🧹]

@@ -6,7 +6,7 @@ title: "Implementation Guide and Future Considerations"
 
 ### Implementation Timeline
 
-``` mermaid
+```{mermaid}
 gantt
     title Project Implementation Schedule
     dateFormat  YYYY-MM-DD

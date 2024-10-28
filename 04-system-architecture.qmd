@@ -6,7 +6,7 @@ title: "System Architecture and Implementation"
 
 ### System Overview
 
-``` mermaid
+```{mermaid}
 graph TD
     A[Data Sources 📊] --> B[R Processing Layer 🔄]
     B --> C[dbt Transformation 🔧]
@@ -40,7 +40,7 @@ r_components |>
 
 ### Logical Data Model 📊
 
-``` mermaid
+```{mermaid}
 erDiagram
     VESSELS ||--o{ TRIPS : makes
     TRIPS ||--o{ CATCH_DATA : contains

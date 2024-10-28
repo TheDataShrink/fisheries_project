@@ -26,7 +26,7 @@ performance_metrics |>
 
 ### ROI Calculation 📈
 
-``` mermaid
+```{mermaid}
 pie
     title "Cost Savings Distribution"
     "Labor Cost Reduction" : 45
