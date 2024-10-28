@@ -1,0 +1,50 @@
+---
+title: "System Architecture and Implementation"
+---
+
+## Component Integration 🏗️
+
+### System Overview
+
+``` mermaid
+graph TD
+    A[Data Sources 📊] --> B[R Processing Layer 🔄]
+    B --> C[dbt Transformation 🔧]
+    C --> D[SQL Server 💾]
+    D --> E[Reporting Layer 📈]
+    style A fill:#f9f,stroke:#333
+    style E fill:#bbf,stroke:#333
+```
+
+## Workflow Orchestration with R 🔄
+
+### R Processing Components
+
+```{r}
+#| label: r-components
+#| echo: false
+
+r_components <- tibble::tribble(
+  ~Component, ~Purpose, ~Dependencies,
+  "Data Loader", "Initial data ingestion", "readxl, tidyverse",
+  "Validator", "Data validation", "assertr, validate",
+  "Transformer", "Data transformation", "dplyr, tidyr",
+  "Logger", "Process logging", "logger, futile.logger"
+)
+
+r_components |> 
+  knitr::kable()
+```
+
+## Database Schema Design 💾
+
+### Logical Data Model 📊
+
+``` mermaid
+erDiagram
+    VESSELS ||--o{ TRIPS : makes
+    TRIPS ||--o{ CATCH_DATA : contains
+    CATCH_DATA }|--|| SPECIES : references
+```
+
+[➡️ Next: System Evaluation](05-evaluation.qmd)

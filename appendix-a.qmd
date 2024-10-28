@@ -1,0 +1,36 @@
+---
+title: "Technical Documentation"
+---
+
+## System Architecture Details 🏗️
+
+### Component Specifications
+
+```{mermaid}
+graph TD
+    A[Front End 🖥️] --> B[API Layer 🔌]
+    B --> C[Processing Engine ⚙️]
+    C --> D[Database 💾]
+    D --> E[Reporting 📊]
+```
+
+## Database Schema 💾
+
+### Table Definitions
+
+``` sql
+CREATE TABLE Vessels (
+    vessel_id INT PRIMARY KEY,
+    vessel_name VARCHAR(100),
+    registration_number VARCHAR(50)
+);
+
+CREATE TABLE Trips (
+    trip_id INT PRIMARY KEY,
+    vessel_id INT FOREIGN KEY REFERENCES Vessels(vessel_id),
+    start_date DATE,
+    end_date DATE
+);
+```
+
+[🔙 Back to Implementation](06-implementation.qmd)

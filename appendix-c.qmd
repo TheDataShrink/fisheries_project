@@ -1,0 +1,38 @@
+---
+title: "References and Glossary"
+---
+
+## Technical References 📚
+
+### Industry Standards 📋
+
+1. **Data Management**
+   - ISO/IEC 27001
+   - GDPR compliance
+   - Industry best practices
+
+2. **Documentation**
+   - Technical writing standards
+   - API documentation
+   - Code documentation
+
+## Glossary 📖
+
+### Terms and Definitions
+
+```{r}
+#| label: glossary
+#| echo: false
+
+glossary_terms <- tibble::tribble(
+  ~Term, ~Definition, ~Category,
+  "SPC", "South Pacific Commission", "Organization",
+  "CRISP-DM", "Cross-Industry Standard Process for Data Mining", "Methodology",
+  "dbt", "Data Build Tool", "Technology"
+)
+
+glossary_terms |> 
+  knitr::kable()
+```
+
+[🔙 Back to Main Content](index.qmd)

@@ -1,0 +1,24 @@
+---
+title: "User Guides"
+---
+
+## Standard Operating Procedures 📋
+
+### Daily Operations Checklist ✅
+
+1. **System Monitoring** 👁️
+   - Check system status
+   - Review error logs
+   - Monitor data flow
+
+2. **Data Validation** ✅
+   - Review validation reports
+   - Address any failures
+   - Document issues
+
+3. **Maintenance Tasks** 🔧
+   - Backup verification
+   - Performance checks
+   - Security audit
+
+[🔙 Back to Implementation](06-implementation.qmd)
