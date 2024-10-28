@@ -1,0 +1,282 @@
+[
+  {
+    "objectID": "appendix-a.html",
+    "href": "appendix-a.html",
+    "title": "Technical Documentation",
+    "section": "",
+    "text": "Show code\ngraph TD\n    A[Front End️] --&gt; B[API Layer]\n    B --&gt; C[Processing Engine️]\n    C --&gt; D[Database]\n    D --&gt; E[Reporting]\n\n\n\n\n\ngraph TD\n    A[Front End️] --&gt; B[API Layer]\n    B --&gt; C[Processing Engine️]\n    C --&gt; D[Database]\n    D --&gt; E[Reporting]"
+  },
+  {
+    "objectID": "appendix-a.html#system-architecture-details",
+    "href": "appendix-a.html#system-architecture-details",
+    "title": "Technical Documentation",
+    "section": "",
+    "text": "Show code\ngraph TD\n    A[Front End️] --&gt; B[API Layer]\n    B --&gt; C[Processing Engine️]\n    C --&gt; D[Database]\n    D --&gt; E[Reporting]\n\n\n\n\n\ngraph TD\n    A[Front End️] --&gt; B[API Layer]\n    B --&gt; C[Processing Engine️]\n    C --&gt; D[Database]\n    D --&gt; E[Reporting]"
+  },
+  {
+    "objectID": "appendix-a.html#database-schema",
+    "href": "appendix-a.html#database-schema",
+    "title": "Technical Documentation",
+    "section": "2 Database Schema 💾",
+    "text": "2 Database Schema 💾\n\n2.1 Table Definitions\nCREATE TABLE Vessels (\n    vessel_id INT PRIMARY KEY,\n    vessel_name VARCHAR(100),\n    registration_number VARCHAR(50)\n);\n\nCREATE TABLE Trips (\n    trip_id INT PRIMARY KEY,\n    vessel_id INT FOREIGN KEY REFERENCES Vessels(vessel_id),\n    start_date DATE,\n    end_date DATE\n);\n🔙 Back to Implementation"
+  },
+  {
+    "objectID": "02-data-reception.html",
+    "href": "02-data-reception.html",
+    "title": "Data Reception and Understanding",
+    "section": "",
+    "text": "Understanding the variety of input formats is crucial for automation success. This chapter details our approach to handling diverse data sources.\n\n\n\n\n\n\n\nFormat\nFrequency\nChallenges\n\n\n\n\nExcel 97-2003\n30\nLegacy format, limited features\n\n\nExcel 2007+\n45\nMultiple sheets, complex formatting\n\n\nCSV\n25\nEncoding issues, delimiter variations"
+  },
+  {
+    "objectID": "02-data-reception.html#data-source-analysis",
+    "href": "02-data-reception.html#data-source-analysis",
+    "title": "Data Reception and Understanding",
+    "section": "",
+    "text": "Understanding the variety of input formats is crucial for automation success. This chapter details our approach to handling diverse data sources.\n\n\n\n\n\n\n\nFormat\nFrequency\nChallenges\n\n\n\n\nExcel 97-2003\n30\nLegacy format, limited features\n\n\nExcel 2007+\n45\nMultiple sheets, complex formatting\n\n\nCSV\n25\nEncoding issues, delimiter variations"
+  },
+  {
+    "objectID": "02-data-reception.html#automated-reception-system",
+    "href": "02-data-reception.html#automated-reception-system",
+    "title": "Data Reception and Understanding",
+    "section": "2 Automated Reception System 🤖",
+    "text": "2 Automated Reception System 🤖\n\n2.1 System Architecture 🏗️\n\n\nShow code\nflowchart LR\n    subgraph Raw Data\n        RD[Raw Data Files]\n    end\n\n    subgraph Database\n        PG[(PostgreSQL DB)]\n    end\n\n    subgraph Data Transformation\n        DBT[dbt Transformations]\n    end\n\n    subgraph Analysis & Visualization\n        RS[RStudio]\n        SH[Shiny Dashboard]\n    end\n\n    RD --&gt;|Load| PG\n    PG --&gt;|Source Data| DBT\n    DBT --&gt;|Transformed Data| PG\n    PG --&gt;|Query Data| RS\n    PG --&gt;|Query Data| SH\n    RS --&gt;|Analysis Results| SH\n\n\n\n\n\nflowchart LR\n    subgraph Raw Data\n        RD[Raw Data Files]\n    end\n\n    subgraph Database\n        PG[(PostgreSQL DB)]\n    end\n\n    subgraph Data Transformation\n        DBT[dbt Transformations]\n    end\n\n    subgraph Analysis & Visualization\n        RS[RStudio]\n        SH[Shiny Dashboard]\n    end\n\n    RD --&gt;|Load| PG\n    PG --&gt;|Source Data| DBT\n    DBT --&gt;|Transformed Data| PG\n    PG --&gt;|Query Data| RS\n    PG --&gt;|Query Data| SH\n    RS --&gt;|Analysis Results| SH\n\n\n\n\n\n\n\n\n2.2 Security Measures 🔒\n\nEncryption 🔐\n\nIn-transit encryption\nAt-rest encryption\nKey management\n\nAuthentication 👤\n\nMulti-factor authentication\nRole-based access\nSession management\n\nMonitoring 👁️\n\nReal-time alerts\nActivity logging\nPerformance metrics"
+  },
+  {
+    "objectID": "02-data-reception.html#data-quality-assessment",
+    "href": "02-data-reception.html#data-quality-assessment",
+    "title": "Data Reception and Understanding",
+    "section": "3 Data Quality Assessment 🎯",
+    "text": "3 Data Quality Assessment 🎯\n\n3.1 Initial Validation Checks ✅\n\n\n\n\n\nCheck_Type\nDescription\nSeverity\n\n\n\n\nFormat\nFile format verification\nHigh\n\n\nStructure\nExpected columns present\nHigh\n\n\nData Types\nCorrect data types\nMedium\n\n\nRange\nValues within expected ranges\nMedium\n\n\nCompleteness\nRequired fields populated\nHigh\n\n\n\n\n\n\n\n3.2 Monitoring Framework 📊\n\n3.2.1 Real-time Metrics 📈\n\n📥 Reception success rate\n⏱️ Processing time\n❌ Error frequency\n📊 Data volume\n🎯 Quality scores\n\n\n\n3.2.2 Alerting System ⚠️\n\n🔔 Immediate alerts for critical issues\n📧 Daily summary reports\n📊 Weekly performance metrics\n📈 Trend analysis"
+  },
+  {
+    "objectID": "02-data-reception.html#data-profiling",
+    "href": "02-data-reception.html#data-profiling",
+    "title": "Data Reception and Understanding",
+    "section": "4 Data Profiling 🔍",
+    "text": "4 Data Profiling 🔍\n\n4.1 Automated Analysis 📊\n\n\n\n\n\nMetric\nDescription\nFrequency\n\n\n\n\nCompleteness\nMissing value analysis\nPer file\n\n\nConsistency\nFormat adherence\nPer file\n\n\nValidity\nBusiness rule compliance\nPer file\n\n\nTimeliness\nProcessing duration\nPer file"
+  },
+  {
+    "objectID": "02-data-reception.html#next-steps",
+    "href": "02-data-reception.html#next-steps",
+    "title": "Data Reception and Understanding",
+    "section": "5 Next Steps 📋",
+    "text": "5 Next Steps 📋\n\n➡️ Proceed to Data Preparation\n🔙 Back to Introduction\n📚 View Technical Documentation"
+  },
+  {
+    "objectID": "03-data-preparation.html",
+    "href": "03-data-preparation.html",
+    "title": "Data Preparation and Processing",
+    "section": "",
+    "text": "Show code\ngraph TD\n    A[Raw Data] --&gt; B[Extraction]\n    B --&gt; C[Cleaning]\n    C --&gt; D[Standardization]\n    D --&gt; E[Validation]\n    E --&gt; F[Loading]\n    style A fill:#f9f,stroke:#333\n    style F fill:#bbf,stroke:#333\n\n\n\n\n\ngraph TD\n    A[Raw Data] --&gt; B[Extraction]\n    B --&gt; C[Cleaning]\n    C --&gt; D[Standardization]\n    D --&gt; E[Validation]\n    E --&gt; F[Loading]\n    style A fill:#f9f,stroke:#333\n    style F fill:#bbf,stroke:#333"
+  },
+  {
+    "objectID": "03-data-preparation.html#data-processing-pipeline",
+    "href": "03-data-preparation.html#data-processing-pipeline",
+    "title": "Data Preparation and Processing",
+    "section": "",
+    "text": "Show code\ngraph TD\n    A[Raw Data] --&gt; B[Extraction]\n    B --&gt; C[Cleaning]\n    C --&gt; D[Standardization]\n    D --&gt; E[Validation]\n    E --&gt; F[Loading]\n    style A fill:#f9f,stroke:#333\n    style F fill:#bbf,stroke:#333\n\n\n\n\n\ngraph TD\n    A[Raw Data] --&gt; B[Extraction]\n    B --&gt; C[Cleaning]\n    C --&gt; D[Standardization]\n    D --&gt; E[Validation]\n    E --&gt; F[Loading]\n    style A fill:#f9f,stroke:#333\n    style F fill:#bbf,stroke:#333"
+  },
+  {
+    "objectID": "03-data-preparation.html#data-extraction-methods",
+    "href": "03-data-preparation.html#data-extraction-methods",
+    "title": "Data Preparation and Processing",
+    "section": "2 Data Extraction Methods 🔍",
+    "text": "2 Data Extraction Methods 🔍\n\n2.1 Automated Extraction Process\n\n\n\n\n\nMethod\nDataType\nReliability\n\n\n\n\nExcel Direct Read\nStructured Tables\nHigh\n\n\nPattern Matching\nSemi-structured\nMedium\n\n\nCustom Parsers\nComplex Formats\nHigh"
+  },
+  {
+    "objectID": "03-data-preparation.html#format-standardization",
+    "href": "03-data-preparation.html#format-standardization",
+    "title": "Data Preparation and Processing",
+    "section": "3 Format Standardization 📋",
+    "text": "3 Format Standardization 📋\n\n3.1 Standardization Rules 📏\n\nDate Formats 📅\n\nISO 8601 compliance\nTimezone handling\nHistorical data conversion\n\nNumerical Values 🔢\n\nDecimal standardization\nUnit conversion\nRange validation\n\nText Fields 📝\n\nCharacter encoding\nCase normalization\nWhitespace handling"
+  },
+  {
+    "objectID": "03-data-preparation.html#quality-control-checks",
+    "href": "03-data-preparation.html#quality-control-checks",
+    "title": "Data Preparation and Processing",
+    "section": "4 Quality Control Checks ✅",
+    "text": "4 Quality Control Checks ✅\n\n4.1 Validation Framework\n\n\nShow code\nvalidation_rules &lt;- tibble::tribble(\n  ~Rule, ~Description, ~Severity,\n  \"Completeness\", \"Required fields present\", \"High\",\n  \"Format\", \"Data format compliance\", \"High\",\n  \"Range\", \"Values within bounds\", \"Medium\",\n  \"Consistency\", \"Cross-field validation\", \"High\"\n)\n\nvalidation_rules |&gt; \n  knitr::kable()\n\n\n\n\n\nRule\nDescription\nSeverity\n\n\n\n\nCompleteness\nRequired fields present\nHigh\n\n\nFormat\nData format compliance\nHigh\n\n\nRange\nValues within bounds\nMedium\n\n\nConsistency\nCross-field validation\nHigh\n\n\n\n\n\n➡️ Next: System Architecture"
+  },
+  {
+    "objectID": "appendix-b.html",
+    "href": "appendix-b.html",
+    "title": "User Guides",
+    "section": "",
+    "text": "System Monitoring 👁️\n\nCheck system status\nReview error logs\nMonitor data flow\n\nData Validation ✅\n\nReview validation reports\nAddress any failures\nDocument issues\n\nMaintenance Tasks 🔧\n\nBackup verification\nPerformance checks\nSecurity audit\n\n\n🔙 Back to Implementation"
+  },
+  {
+    "objectID": "appendix-b.html#standard-operating-procedures",
+    "href": "appendix-b.html#standard-operating-procedures",
+    "title": "User Guides",
+    "section": "",
+    "text": "System Monitoring 👁️\n\nCheck system status\nReview error logs\nMonitor data flow\n\nData Validation ✅\n\nReview validation reports\nAddress any failures\nDocument issues\n\nMaintenance Tasks 🔧\n\nBackup verification\nPerformance checks\nSecurity audit\n\n\n🔙 Back to Implementation"
+  },
+  {
+    "objectID": "05-evaluation.html",
+    "href": "05-evaluation.html",
+    "title": "System Evaluation and Benefits Analysis",
+    "section": "",
+    "text": "Metric\nBefore\nAfter\nImprovement\n\n\n\n\nProcessing Time (hrs)\n24\n2.0\n92%\n\n\nError Rate (%)\n5\n0.5\n90%\n\n\nManual Effort (hrs/week)\n40\n4.0\n90%\n\n\nData Quality Score (%)\n85\n98.0\n15%"
+  },
+  {
+    "objectID": "05-evaluation.html#performance-metrics",
+    "href": "05-evaluation.html#performance-metrics",
+    "title": "System Evaluation and Benefits Analysis",
+    "section": "",
+    "text": "Metric\nBefore\nAfter\nImprovement\n\n\n\n\nProcessing Time (hrs)\n24\n2.0\n92%\n\n\nError Rate (%)\n5\n0.5\n90%\n\n\nManual Effort (hrs/week)\n40\n4.0\n90%\n\n\nData Quality Score (%)\n85\n98.0\n15%"
+  },
+  {
+    "objectID": "05-evaluation.html#cost-benefit-analysis",
+    "href": "05-evaluation.html#cost-benefit-analysis",
+    "title": "System Evaluation and Benefits Analysis",
+    "section": "2 Cost-Benefit Analysis 💰",
+    "text": "2 Cost-Benefit Analysis 💰\n\n2.1 ROI Calculation 📈\n\n\nShow code\npie title Cost Savings Distribution\n    \"Labor Cost Reduction\" : 45\n    \"Error Prevention\" : 25\n    \"Faster Processing\" : 20\n    \"Infrastructure\" : 10\n\n\n\n\n\npie title Cost Savings Distribution\n    \"Labor Cost Reduction\" : 45\n    \"Error Prevention\" : 25\n    \"Faster Processing\" : 20\n    \"Infrastructure\" : 10\n\n\n\n\n\n\n➡️ Next: Implementation Guide"
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "",
+    "section": "",
+    "text": "CodeShow All CodeHide All CodeView Source\n\n\n\n\n\n1 Summary\nIn summary, this book has no content whatsoever.\n\n\nShow code\n1 + 1\n\n\n[1] 2"
+  },
+  {
+    "objectID": "01-introduction.html",
+    "href": "01-introduction.html",
+    "title": "Introduction and Business Understanding",
+    "section": "",
+    "text": "SPC’s data management team faces several challenges in processing operational logbook fisheries data. This chapter explores the current situation and sets the foundation for automation.\n\n\n\n\nShow code\n%%{init: {'themeVariables': { 'fontSize': '22px' }}}%%\nflowchart LR\n  A[Manual Email Reception] --&gt; B[Excel Format Variations]\n  B --&gt; C[Manual Processing]\n  C --&gt; D[Quality Issues]\n  D --&gt; E[Delayed Analysis]\n  E --&gt; F[Resource Intensive]\n\n\n\n\n\n%%{init: {'themeVariables': { 'fontSize': '22px' }}}%%\nflowchart LR\n  A[Manual Email Reception] --&gt; B[Excel Format Variations]\n  B --&gt; C[Manual Processing]\n  C --&gt; D[Quality Issues]\n  D --&gt; E[Delayed Analysis]\n  E --&gt; F[Resource Intensive]"
+  },
+  {
+    "objectID": "01-introduction.html#business-context",
+    "href": "01-introduction.html#business-context",
+    "title": "Introduction and Business Understanding",
+    "section": "",
+    "text": "SPC’s data management team faces several challenges in processing operational logbook fisheries data. This chapter explores the current situation and sets the foundation for automation.\n\n\n\n\nShow code\n%%{init: {'themeVariables': { 'fontSize': '22px' }}}%%\nflowchart LR\n  A[Manual Email Reception] --&gt; B[Excel Format Variations]\n  B --&gt; C[Manual Processing]\n  C --&gt; D[Quality Issues]\n  D --&gt; E[Delayed Analysis]\n  E --&gt; F[Resource Intensive]\n\n\n\n\n\n%%{init: {'themeVariables': { 'fontSize': '22px' }}}%%\nflowchart LR\n  A[Manual Email Reception] --&gt; B[Excel Format Variations]\n  B --&gt; C[Manual Processing]\n  C --&gt; D[Quality Issues]\n  D --&gt; E[Delayed Analysis]\n  E --&gt; F[Resource Intensive]"
+  },
+  {
+    "objectID": "01-introduction.html#current-challenges",
+    "href": "01-introduction.html#current-challenges",
+    "title": "Introduction and Business Understanding",
+    "section": "2 Current Challenges 🔍",
+    "text": "2 Current Challenges 🔍\nThe existing process involves several pain points:\n\n📧 Manual email handling and file management\n📊 Various Excel formats requiring individual attention\n⏱️ Time-consuming manual processing steps\n❌ Inconsistent validation procedures\n🤹 Limited automation capabilities"
+  },
+  {
+    "objectID": "01-introduction.html#user-stories",
+    "href": "01-introduction.html#user-stories",
+    "title": "Introduction and Business Understanding",
+    "section": "3 User Stories 👥",
+    "text": "3 User Stories 👥\n\n3.1 1. Data Reception Automation 🔄\nAs a data management staff member, I want to automate the reception of fisheries data.\n\n📫 Current: Manual email processing\n🎯 Desired: Automated file reception\n✨ Benefits: Reduced delays and handling time\n\n➡️ See implementation details\n\n\n3.2 2. Database Loading 💾\nAs a data manager, I need automated database loading.\n\n📑 Current: Manual Excel processing\n🎯 Desired: Automated database loading\n✨ Benefits: Faster, more reliable processing\n\n➡️ See technical architecture\n\n\n3.3 3. Quality Assurance 🎯\nAs a data quality analyst, I want automated checking.\n\n👁️ Current: Manual inspection\n🎯 Desired: Automated validation\n✨ Benefits: Consistent quality control\n\n➡️ See data validation approach"
+  },
+  {
+    "objectID": "01-introduction.html#business-requirements",
+    "href": "01-introduction.html#business-requirements",
+    "title": "Introduction and Business Understanding",
+    "section": "4 Business Requirements 📋",
+    "text": "4 Business Requirements 📋\n\n4.1 Functional Requirements ⚙️\n\nData Reception 📥\n\nAutomated file reception system\nFormat validation\nSecure transfer protocols\n\nProcessing 🔄\n\nAutomated data extraction\nFormat standardization\nError handling\n\nStorage 💾\n\nSQL Server database\nData versioning\nBackup procedures\n\n\n\n\n4.2 Non-Functional Requirements 🎯\n\nPerformance ⚡\n\nProcessing time &lt; 2 hours\n99.9% uptime\nReal-time monitoring\n\nSecurity 🔒\n\nData encryption\nAccess control\nAudit logging\n\nUsability 👥\n\nIntuitive interface\nClear error messages\nDocumentation"
+  },
+  {
+    "objectID": "01-introduction.html#success-criteria",
+    "href": "01-introduction.html#success-criteria",
+    "title": "Introduction and Business Understanding",
+    "section": "5 Success Criteria 🎯",
+    "text": "5 Success Criteria 🎯\n\n⏱️ 90% reduction in processing time\n📊 99% data accuracy rate\n💪 80% reduction in manual effort\n📈 100% data traceability\n🔄 Real-time processing capability\n\n➡️ Next Chapter: Data Reception and Understanding"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\n\nReferences"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Automated Fisheries Data Management System",
+    "section": "",
+    "text": "📚 Welcome to the comprehensive guide for automating SPC’s fisheries data management processes. This book outlines a modern approach to handling operational logbook fisheries data, moving from manual Excel processing to an automated, database-driven solution."
+  },
+  {
+    "objectID": "index.html#preface",
+    "href": "index.html#preface",
+    "title": "Automated Fisheries Data Management System",
+    "section": "",
+    "text": "📚 Welcome to the comprehensive guide for automating SPC’s fisheries data management processes. This book outlines a modern approach to handling operational logbook fisheries data, moving from manual Excel processing to an automated, database-driven solution."
+  },
+  {
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "Automated Fisheries Data Management System",
+    "section": "Project Overview",
+    "text": "Project Overview\n🎯 Each year SPC receives operational logbook fisheries data from distant water fishing nations, in various Excel formats. Describe a simple system for automating data reception, loading, checking, and consolidating into an SQL Server database – as an alternative to emailing Excel files and manual formatting/loading. This presentation is aimed at data management staff as a proposal for a new way of doing things, to improve efficiency. Please provide enough detail to understand the proposed process and anticipated benefits, but not all of the technical details required for implementation.\n\nKey Objectives\n\n🤖 Automate data reception and processing\n📋 Standardize data formats\n✅ Implement robust validation\n⚡ Improve operational efficiency\n🎯 Ensure data quality and consistency\n\n\n\nHow to Use This Book\n\n\n\nCrisp-DM\n\n\n📖 This book follows the CRISP-DM methodology while addressing specific needs of fisheries data management:\n\n🔍 Each chapter corresponds to a CRISP-DM phase:\n\nChapter 1: Introduction and Business Understanding\nChapter 2: Data Reception and Understanding\nChapter 3: Data Preparation and Processing\nChapter 4: System Architecture and Modeling\nChapter 5: System Evaluation and Benefits\nChapter 6: Implementation and Deployment\n\n💡 Practical examples and implementation details are provided in each chapter:\n\nTechnical Documentation\nUser Guides\nReferences and Glossary\n\n🔧 Technical content is balanced with user-friendly explanations throughout all chapters\n📊 Interactive elements enhance understanding with:\n\nMermaid diagrams\nR code examples\nInteractive visualizations\n\n📈 Clear progression from concept to implementation:\n\nStart with the Introduction\nFollow the implementation guide in Chapter 6\nReference the Technical Documentation as needed\n\n\n\n\nQuick Navigation\n📑 Key Resources: - System Architecture 🏗️ - Data Processing Workflows ⚙️ - Implementation Guide 📋 - Performance Metrics 📊 - User Guides 📖"
+  },
+  {
+    "objectID": "06-implementation.html",
+    "href": "06-implementation.html",
+    "title": "Implementation Guide and Future Considerations",
+    "section": "",
+    "text": "Show code\ngantt\n    title Project Implementation Schedule\n    dateFormat  YYYY-MM-DD\n    section Infrastructure\n    Setup    :2024-11-01, 30d\n    Configuration   :2024-12-01, 15d\n    section Migration\n    Data Migration  :2024-12-15, 45d\n    Testing        :2025-01-15, 30d\n    section Training\n    Staff Training :2025-02-15, 30d\n    Go Live       :2025-03-15, 15d\n\n\n\n\n\ngantt\n    title Project Implementation Schedule\n    dateFormat  YYYY-MM-DD\n    section Infrastructure\n    Setup    :2024-11-01, 30d\n    Configuration   :2024-12-01, 15d\n    section Migration\n    Data Migration  :2024-12-15, 45d\n    Testing        :2025-01-15, 30d\n    section Training\n    Staff Training :2025-02-15, 30d\n    Go Live       :2025-03-15, 15d"
+  },
+  {
+    "objectID": "06-implementation.html#deployment-strategy",
+    "href": "06-implementation.html#deployment-strategy",
+    "title": "Implementation Guide and Future Considerations",
+    "section": "",
+    "text": "Show code\ngantt\n    title Project Implementation Schedule\n    dateFormat  YYYY-MM-DD\n    section Infrastructure\n    Setup    :2024-11-01, 30d\n    Configuration   :2024-12-01, 15d\n    section Migration\n    Data Migration  :2024-12-15, 45d\n    Testing        :2025-01-15, 30d\n    section Training\n    Staff Training :2025-02-15, 30d\n    Go Live       :2025-03-15, 15d\n\n\n\n\n\ngantt\n    title Project Implementation Schedule\n    dateFormat  YYYY-MM-DD\n    section Infrastructure\n    Setup    :2024-11-01, 30d\n    Configuration   :2024-12-01, 15d\n    section Migration\n    Data Migration  :2024-12-15, 45d\n    Testing        :2025-01-15, 30d\n    section Training\n    Staff Training :2025-02-15, 30d\n    Go Live       :2025-03-15, 15d"
+  },
+  {
+    "objectID": "06-implementation.html#configuration-requirements",
+    "href": "06-implementation.html#configuration-requirements",
+    "title": "Implementation Guide and Future Considerations",
+    "section": "2 Configuration Requirements ⚙️",
+    "text": "2 Configuration Requirements ⚙️\n\n2.1 System Setup Checklist ✅\n\nInfrastructure Setup 🏗️\n\nServer provisioning\nNetwork configuration\nSecurity setup\n\nSoftware Installation 💿\n\nR environment\nSQL Server\ndbt framework\n\nIntegration Configuration 🔄\n\nAPI setup\nAuthentication\nMonitoring tools\n\n\n➡️ Next: Technical Documentation"
+  },
+  {
+    "objectID": "04-system-architecture.html",
+    "href": "04-system-architecture.html",
+    "title": "System Architecture and Implementation",
+    "section": "",
+    "text": "Show code\ngraph TD\n    A[Data Sources] --&gt; B[R Processing Layer]\n    B --&gt; C[dbt Transformation]\n    C --&gt; D[SQL Server]\n    D --&gt; E[Reporting Layer]\n    style A fill:#f9f,stroke:#333\n    style E fill:#bbf,stroke:#333\n\n\n\n\n\ngraph TD\n    A[Data Sources] --&gt; B[R Processing Layer]\n    B --&gt; C[dbt Transformation]\n    C --&gt; D[SQL Server]\n    D --&gt; E[Reporting Layer]\n    style A fill:#f9f,stroke:#333\n    style E fill:#bbf,stroke:#333"
+  },
+  {
+    "objectID": "04-system-architecture.html#component-integration",
+    "href": "04-system-architecture.html#component-integration",
+    "title": "System Architecture and Implementation",
+    "section": "",
+    "text": "Show code\ngraph TD\n    A[Data Sources] --&gt; B[R Processing Layer]\n    B --&gt; C[dbt Transformation]\n    C --&gt; D[SQL Server]\n    D --&gt; E[Reporting Layer]\n    style A fill:#f9f,stroke:#333\n    style E fill:#bbf,stroke:#333\n\n\n\n\n\ngraph TD\n    A[Data Sources] --&gt; B[R Processing Layer]\n    B --&gt; C[dbt Transformation]\n    C --&gt; D[SQL Server]\n    D --&gt; E[Reporting Layer]\n    style A fill:#f9f,stroke:#333\n    style E fill:#bbf,stroke:#333"
+  },
+  {
+    "objectID": "04-system-architecture.html#workflow-orchestration-with-r",
+    "href": "04-system-architecture.html#workflow-orchestration-with-r",
+    "title": "System Architecture and Implementation",
+    "section": "2 Workflow Orchestration with R 🔄",
+    "text": "2 Workflow Orchestration with R 🔄\n\n2.1 R Processing Components\n\n\n\n\n\nComponent\nPurpose\nDependencies\n\n\n\n\nData Loader\nInitial data ingestion\nreadxl, tidyverse\n\n\nValidator\nData validation\nassertr, validate\n\n\nTransformer\nData transformation\ndplyr, tidyr\n\n\nLogger\nProcess logging\nlogger, futile.logger"
+  },
+  {
+    "objectID": "04-system-architecture.html#database-schema-design",
+    "href": "04-system-architecture.html#database-schema-design",
+    "title": "System Architecture and Implementation",
+    "section": "3 Database Schema Design 💾",
+    "text": "3 Database Schema Design 💾\n\n3.1 Logical Data Model 📊\n\n\nShow code\nerDiagram\n    VESSELS ||--o{ TRIPS : makes\n    TRIPS ||--o{ CATCH_DATA : contains\n    CATCH_DATA }|--|| SPECIES : references\n\n\n\n\n\nerDiagram\n    VESSELS ||--o{ TRIPS : makes\n    TRIPS ||--o{ CATCH_DATA : contains\n    CATCH_DATA }|--|| SPECIES : references\n\n\n\n\n\n\n➡️ Next: System Evaluation"
+  },
+  {
+    "objectID": "appendix-c.html",
+    "href": "appendix-c.html",
+    "title": "References and Glossary",
+    "section": "",
+    "text": "Data Management\n\nISO/IEC 27001\nGDPR compliance\nIndustry best practices\n\nDocumentation\n\nTechnical writing standards\nAPI documentation\nCode documentation"
+  },
+  {
+    "objectID": "appendix-c.html#technical-references",
+    "href": "appendix-c.html#technical-references",
+    "title": "References and Glossary",
+    "section": "",
+    "text": "Data Management\n\nISO/IEC 27001\nGDPR compliance\nIndustry best practices\n\nDocumentation\n\nTechnical writing standards\nAPI documentation\nCode documentation"
+  },
+  {
+    "objectID": "appendix-c.html#glossary",
+    "href": "appendix-c.html#glossary",
+    "title": "References and Glossary",
+    "section": "2 Glossary 📖",
+    "text": "2 Glossary 📖\n\n2.1 Terms and Definitions\n\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\nCategory\n\n\n\n\nSPC\nSouth Pacific Commission\nOrganization\n\n\nCRISP-DM\nCross-Industry Standard Process for Data Mining\nMethodology\n\n\ndbt\nData Build Tool\nTechnology\n\n\n\n\n\n🔙 Back to Main Content"
+  }
+]
