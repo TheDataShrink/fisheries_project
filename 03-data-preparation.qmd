@@ -8,11 +8,11 @@ title: "Data Preparation and Processing"
 
 ```{mermaid}
 graph TD
-    A[Raw Data 📥] --> B[Extraction 🔍]
-    B --> C[Cleaning 🧹]
-    C --> D[Standardization 📋]
-    D --> E[Validation ✅]
-    E --> F[Loading 📤]
+    A[Raw Data] --> B[Extraction]
+    B --> C[Cleaning]
+    C --> D[Standardization]
+    D --> E[Validation]
+    E --> F[Loading]
     style A fill:#f9f,stroke:#333
     style F fill:#bbf,stroke:#333
 ```
