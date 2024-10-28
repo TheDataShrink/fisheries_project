@@ -3,7 +3,7 @@ name: Quarto Publish
 on:
   push:
     branches:
-      - main  # or master, depending on your setup
+      - main  # Adjust if you're using a different default branch (e.g., master)
 
 jobs:
   build:
@@ -12,25 +12,28 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # Install Quarto
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      # Install system dependencies (e.g., libcurl if needed)
       - name: Install system dependencies
         run: sudo apt-get install -y libcurl4-openssl-dev
 
+      # Install renv and restore dependencies (for R projects)
       - name: Install renv and restore dependencies
         run: |
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
 
+      # Render the Quarto book
       - name: Render Book
         run: quarto render
 
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
           publish_dir: ./docs
-          # This adds the .nojekyll file to disable Jekyll processing
-          keep_files: .nojekyll
+          keep_files: .nojekyll  # Prevent Jekyll from processing Quarto output
