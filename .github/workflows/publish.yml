@@ -3,7 +3,7 @@ name: Quarto Publish
 on:
   push:
     branches:
-      - main  # Adjust if you're using a different default branch (e.g., master)
+      - main  # Or master, depending on your setup
 
 jobs:
   build:
@@ -16,11 +16,17 @@ jobs:
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # Install system dependencies (e.g., libcurl if needed)
+      # Set up a writable R library path
+      - name: Set up R library path
+        run: |
+          mkdir -p ~/R/library
+          echo 'R_LIBS_USER="~/R/library"' > ~/.Renviron
+
+      # Install system dependencies
       - name: Install system dependencies
         run: sudo apt-get install -y libcurl4-openssl-dev
 
-      # Install renv and restore dependencies (for R projects)
+      # Install renv and restore dependencies
       - name: Install renv and restore dependencies
         run: |
           R -e 'install.packages("renv")'
@@ -36,4 +42,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          keep_files: .nojekyll  # Prevent Jekyll from processing Quarto output
+          keep_files: .nojekyll  # Ensure that Jekyll is disabled for Quarto
