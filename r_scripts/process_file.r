@@ -3,17 +3,19 @@
 #' @param con database connection
 #' @return processed data frame or NULL if processing fails
 process_file <- function(file) {
+  box::use(readxl = readxl[read_excel])
+  
   tryCatch({
     log_info("Processing file: {file}")
     
     # Extract metadata from file path
-    path_parts <- str_split(file, "/")[[1]]
+    path_parts <- stringr::str_split(file, "/")[[1]]
     data_date <- as.Date(path_parts[2])
     file_name <- basename(file)
-    country <- str_extract(file_name, "^[^_]+")
+    country <- stringr::str_extract(file_name, "^[^_]+")
     
     # Read data
-    data <- read.xlsx(file)
+    data <- read_excel(file)
     
     # Validate required columns
     required_cols <- c("MONTH", "YEAR", "LICENCE_NO", "HOLDERS_NAME", "LOG_NO", 

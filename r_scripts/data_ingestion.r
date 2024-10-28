@@ -1,6 +1,6 @@
 # Load required libraries
 library(DBI)
-library(RPostgres)
+library(duckdb)
 library(readxl)
 library(dplyr)
 library(lubridate)
@@ -63,3 +63,7 @@ main <- function() {
 
 # Run the main function
 main()
+
+# Test the table was created.
+tbl(con, "BRONZE_CATCH_DATA") |>
+  collect()

@@ -1,14 +1,14 @@
 #' Establish database connection with error handling
 #' @return database connection object or NULL if connection fails
 connect_to_db <- function() {
+  box::use(duckdb = duckdb[duckdb,dbConnect])
+  
   tryCatch({
     con <- dbConnect(
-      RPostgres::Postgres(),
+      duckdb::duckdb(),
       dbname = 'fisheries_db',
-      host = 'db',
-      port = 5432,
-      user = 'postgres',
-      password = 'postgres'
+      user = 'duckdb',
+      password = 'duckdb'
     )
     logger::log_info("Successfully connected to database")
     return(con)
@@ -17,3 +17,4 @@ connect_to_db <- function() {
     return(NULL)
   })
 }
+

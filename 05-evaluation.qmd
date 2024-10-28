@@ -27,8 +27,7 @@ performance_metrics |>
 ### ROI Calculation 📈
 
 ```{mermaid}
-pie
-    title "Cost Savings Distribution"
+pie title Cost Savings Distribution
     "Labor Cost Reduction" : 45
     "Error Prevention" : 25
     "Faster Processing" : 20

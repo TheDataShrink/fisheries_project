@@ -8,10 +8,10 @@ title: "Technical Documentation"
 
 ```{mermaid}
 graph TD
-    A[Front End 🖥️] --> B[API Layer 🔌]
-    B --> C[Processing Engine ⚙️]
-    C --> D[Database 💾]
-    D --> E[Reporting 📊]
+    A[Front End️] --> B[API Layer]
+    B --> C[Processing Engine️]
+    C --> D[Database]
+    D --> E[Reporting]
 ```
 
 ## Database Schema 💾

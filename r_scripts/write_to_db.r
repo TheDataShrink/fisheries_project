@@ -3,6 +3,7 @@
 #' @param data processed data frame
 #' @return boolean indicating success
 write_to_db <- function(con, data) {
+  box::use(duckdb = duckdb[dbWriteTable])
   tryCatch({
     dbWriteTable(
       con, 
@@ -11,7 +12,7 @@ write_to_db <- function(con, data) {
       append = TRUE, 
       row.names = FALSE
     )
-    log_info("Successfully wrote {nrow(data)} rows to database")
+    logger::log_info("Successfully wrote {nrow(data)} rows to database")
     return(TRUE)
   }, error = function(e) {
     logger::log_error("Failed to write to database: {e$message}")

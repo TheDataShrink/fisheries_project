@@ -7,3 +7,106 @@ ERROR [2024-10-28 14:08:26] Failed to connect to database: could not translate h
 ERROR [2024-10-28 14:08:26] Exiting due to database connection failure
 ERROR [2024-10-28 14:08:31] Failed to connect to database: could not translate host name "db" to address: nodename nor servname provided, or not known
 
+INFO [2024-10-28 15:11:55] Starting data ingestion process
+INFO [2024-10-28 15:11:55] Successfully connected to database
+INFO [2024-10-28 15:12:23] Starting data ingestion process
+INFO [2024-10-28 15:12:23] Successfully connected to database
+INFO [2024-10-28 15:13:13] Starting data ingestion process
+INFO [2024-10-28 15:13:13] Successfully connected to database
+INFO [2024-10-28 15:13:13] Created BRONZE_CATCH_DATA table
+INFO [2024-10-28 15:13:13] Found 15 files to process
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-01/Japan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-01/Japan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-01/Korea_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-01/Korea_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-01/Taiwan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-01/Taiwan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-02/Japan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-02/Japan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-02/Korea_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-02/Korea_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-02/Taiwan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-02/Taiwan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-03/Japan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-03/Japan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-03/Korea_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-03/Korea_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-03/Taiwan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-03/Taiwan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-04/Japan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-04/Japan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-04/Korea_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-04/Korea_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-04/Taiwan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-04/Taiwan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-05/Japan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-05/Japan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-05/Korea_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-05/Korea_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Processing file: raw_data//2024-10-05/Taiwan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:13] Successfully processed file: raw_data//2024-10-05/Taiwan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:13] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:13] Completed data ingestion process
+INFO [2024-10-28 15:13:42] Starting data ingestion process
+INFO [2024-10-28 15:13:45] Successfully connected to database
+INFO [2024-10-28 15:13:47] Created BRONZE_CATCH_DATA table
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-01/Japan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-01/Japan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-01/Korea_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-01/Korea_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-01/Taiwan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-01/Taiwan_Marine_Shell_Logbook_2024-10-01.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-02/Japan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-02/Japan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-02/Korea_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-02/Korea_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-02/Taiwan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-02/Taiwan_Marine_Shell_Logbook_2024-10-02.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-03/Japan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-03/Japan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-03/Korea_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-03/Korea_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-03/Taiwan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-03/Taiwan_Marine_Shell_Logbook_2024-10-03.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-04/Japan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-04/Japan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-04/Korea_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-04/Korea_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-04/Taiwan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-04/Taiwan_Marine_Shell_Logbook_2024-10-04.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-05/Japan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-05/Japan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-05/Korea_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-05/Korea_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:13:56] Processing file: raw_data//2024-10-05/Taiwan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:56] Successfully processed file: raw_data//2024-10-05/Taiwan_Marine_Shell_Logbook_2024-10-05.xlsx
+INFO [2024-10-28 15:13:56] Successfully wrote 50 rows to database
+INFO [2024-10-28 15:23:12] Successfully processed file: raw_data//2024-10-05/Taiwan_Marine_Shell_Logbook_2024-10-05.xlsx

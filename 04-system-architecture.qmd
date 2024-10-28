@@ -8,10 +8,10 @@ title: "System Architecture and Implementation"
 
 ```{mermaid}
 graph TD
-    A[Data Sources 📊] --> B[R Processing Layer 🔄]
-    B --> C[dbt Transformation 🔧]
-    C --> D[SQL Server 💾]
-    D --> E[Reporting Layer 📈]
+    A[Data Sources] --> B[R Processing Layer]
+    B --> C[dbt Transformation]
+    C --> D[SQL Server]
+    D --> E[Reporting Layer]
     style A fill:#f9f,stroke:#333
     style E fill:#bbf,stroke:#333
 ```
