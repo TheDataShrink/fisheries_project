@@ -12,8 +12,6 @@ Understanding the variety of input formats is crucial for automation success. Th
 #| label: data-format-analysis
 #| echo: false
 
-library(tidyverse)
-
 # Example code for analyzing Excel formats
 format_summary <- tibble::tribble(
   ~Format, ~Frequency, ~Challenges,
