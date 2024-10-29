@@ -2,11 +2,11 @@
 #' @param file path to Excel file
 #' @param con database connection
 #' @return processed data frame or NULL if processing fails
-process_file <- function(file) {
+  process_file <- function(file) {
   box::use(readxl = readxl[read_excel])
   
   tryCatch({
-    log_info("Processing file: {file}")
+    logger::log_info("Processing file: {file}")
     
     # Extract metadata from file path
     path_parts <- stringr::str_split(file, "/")[[1]]
@@ -55,6 +55,10 @@ process_file <- function(file) {
           TRUE ~ ERROR_MESSAGE
         )
       )
+    data$ID <- 1:nrow(data)
+    
+    data <- data |> 
+      select(ID,everything())
     
     logger::log_info("Successfully processed file: {file}")
     return(data)
@@ -63,4 +67,5 @@ process_file <- function(file) {
     logger::log_error("Error processing file {file}: {e$message}")
     return(NULL)
   })
-}
+  }
+  
